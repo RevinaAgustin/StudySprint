@@ -1,0 +1,327 @@
+/* Clean Tasks Page Design with Soft Blue & Cream */
+.page-task {
+  background: linear-gradient(135deg, #F7F3E9 0%, #E8F4F8 100%);
+  color: #2C3E50;
+  padding: 32px 24px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tasks-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(168, 218, 220, 0.3);
+}
+
+.tasks-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #457B9D 0%, #1D3557 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.tasks-subtitle {
+  font-size: 1.1rem;
+  color: #5A6C7D;
+  font-weight: 400;
+}
+
+.task-input-container {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(168, 218, 220, 0.3);
+}
+
+.task-input-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.task-input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid rgba(168, 218, 220, 0.3);
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  color: #2C3E50;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.task-input:focus {
+  border-color: #A8DADC;
+  box-shadow: 0 0 0 3px rgba(168, 218, 220, 0.2);
+  background: white;
+}
+
+.task-input::placeholder {
+  color: #8B9DC3;
+  font-style: italic;
+}
+
+.add-task-btn {
+  background: linear-gradient(135deg, #A8DADC 0%, #457B9D 100%);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(69, 123, 157, 0.3);
+  min-width: 120px;
+}
+
+.add-task-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(69, 123, 157, 0.4);
+}
+
+.add-task-btn:active {
+  transform: translateY(0);
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-item {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(168, 218, 220, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.task-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #A8DADC 0%, #457B9D 100%);
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.task-item.completed {
+  opacity: 0.7;
+  background: rgba(168, 218, 220, 0.1);
+}
+
+.task-item.completed::before {
+  background: linear-gradient(135deg, #90EE90 0%, #32CD32 100%);
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #A8DADC;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.task-checkbox.checked {
+  background: linear-gradient(135deg, #A8DADC 0%, #457B9D 100%);
+  border-color: #457B9D;
+}
+
+.task-checkbox.checked::after {
+  content: '✓';
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #2C3E50;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #8B9DC3;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.task-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.task-btn.edit {
+  background: linear-gradient(135deg, #FFE66D 0%, #F4A261 100%);
+  color: #2C3E50;
+}
+
+.task-btn.delete {
+  background: linear-gradient(135deg, #EF476F 0%, #D62828 100%);
+  color: white;
+}
+
+.task-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #8B9DC3;
+}
+
+.empty-state-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-state-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state-subtext {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.task-stats {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(168, 218, 220, 0.3);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(168, 218, 220, 0.1);
+  border-radius: 12px;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #457B9D;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #5A6C7D;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-task {
+    padding: 24px 16px;
+  }
+  
+  .task-input-group {
+    flex-direction: column;
+  }
+  
+  .task-input {
+    width: 100%;
+  }
+  
+  .add-task-btn {
+    width: 100%;
+  }
+  
+  .task-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .task-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Animation for new tasks */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-item.new {
+  animation: slideIn 0.4s ease-out;
+}
